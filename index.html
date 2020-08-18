@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Storage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+</head>
+<body>
+    <section class='ui two column center aligned grid' id="signup-view">
+        <div class="column ui secondary segment">
+            <form class="ui form">
+                <div class="field">
+                    <input type="text" placeholder="E-mail address" id="email" />
+                </div>
+                <div class="field">
+                    <input type="password" placeholder="Password" id="pword" />
+                </div>
+                <div class="field">
+                    <input type="file" onchange='chooseFile(event)' />
+                </div>
+                <div class=' ui fluid teal submit button' onclick="signUpButtonPressed()">Sign Up</div>
+            </form>
+        </div>
+    </section>
+
+    <section class='ui two column center aligned grid' id='profile-view'>
+        <div class='column ui segment'>
+            <img src="https://via.placeholder.com/150" class="ui image centered" id='img'>
+            <button class="ui button red" onclick="signOutButtonPressed()">Sign Out</button>
+        </div>
+    </section>
+
+
+    
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-storage.js"></script>
+
+    <script src='app.js'></script>
+
+</body>
+</html>
